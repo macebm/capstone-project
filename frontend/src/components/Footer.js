@@ -4,14 +4,27 @@ import NavigationButton from "./NavigationButton";
 export default function Footer() {
   return (
     <Wrapper>
-      <NavigationButton>Home</NavigationButton>
+      <nav>
+        <NavigationButton onClick={sayHello}>Home</NavigationButton>
+        <NavigationButton onClick={sayHello}>App</NavigationButton>
+      </nav>
     </Wrapper>
   );
+
+  function sayHello() {
+    alert("Hello");
+  }
 }
 
 const Wrapper = styled.footer`
-  background: #57627a;
+  width: 100vw;
+  padding: 20px;
   color: #ffef0c;
   position: fixed;
   bottom: 0;
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
 `;
