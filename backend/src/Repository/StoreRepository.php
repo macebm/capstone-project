@@ -19,6 +19,13 @@ class StoreRepository extends ServiceEntityRepository
         parent::__construct($registry, Store::class);
     }
 
+    public function save(Store $store): Store {
+        $this->_em->persist($store);
+        $this->_em->flush();
+        
+        return $store;
+    }
+
     public function createStore(string $name, string $postal_code, string $street){
         $store = new Store();
         $store->setName($name);
