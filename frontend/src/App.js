@@ -1,7 +1,6 @@
 import Stores from "./components/Stores";
-
-const { default: Footer } = require("./components/Footer");
-const { default: Header } = require("./components/Header");
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
