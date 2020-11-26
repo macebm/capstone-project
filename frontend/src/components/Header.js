@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 
-export default function Header({ children }) {
+export default function Header() {
   return (
     <Wrapper>
       plant

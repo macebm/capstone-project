@@ -23,6 +23,7 @@ export default function Stores() {
 const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  margin-bottom: 3.75rem;
   padding: 2rem;
 `;

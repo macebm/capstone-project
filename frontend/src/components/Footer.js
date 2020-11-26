@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 import NavigationButton from "./NavigationButton";
 
@@ -19,12 +18,11 @@ export default function Footer() {
 }
 
 const Wrapper = styled.footer`
-  //background: ${Colors.secondaryBackground};
   background: none;
   bottom: 0;
   font-size: ${FontSizes.verysmall};
   min-height: 3.75rem;
-  position: sticky;
+  position: fixed;
   width: 100vw;
 
   nav {

@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   background: ${Colors.cardColor};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   font-size: ${FontSizes.medium};
-  margin: 0 auto 20px auto;
+  margin: 0 auto;
   padding: 5px;
   text-align: center;
   width: 300px;

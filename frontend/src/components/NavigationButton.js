@@ -13,4 +13,8 @@ const Wrapper = styled.button`
   padding: 0.5rem 0.6rem;
   text-align: center;
   width: 5rem;
+
+  &:hover {
+    color: lightgreen;
+  }
 `;
