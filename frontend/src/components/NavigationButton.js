@@ -6,11 +6,11 @@ export default function NavigationButton({ children, onClick }) {
 }
 
 const Wrapper = styled.button`
-  background: #57627a;
+  background: ${Colors.primaryBackground};
   border: none;
   border-radius: 6px;
   color: ${Colors.text};
-  height: 2.5rem;
+  padding: 0.5rem 0.6rem;
   text-align: center;
-  width: 8rem;
+  width: 5rem;
 `;

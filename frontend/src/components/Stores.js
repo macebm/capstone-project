@@ -21,10 +21,8 @@ export default function Stores() {
 }
 
 const StyledSection = styled.section`
-  margin-bottom: 5rem;
-  padding: 2rem;
   display: flex;
-  //flex-direction: column;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
 `;

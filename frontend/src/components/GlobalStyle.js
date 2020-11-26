@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components/macro";
 import Colors from "../constants/Colors";
+import FontSizes from "../constants/FontSizes";
 
 export default createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -8,12 +9,12 @@ export default createGlobalStyle`
     }
     body{
         background: ${Colors.secondaryBackground};
-        font-size: 112.5%;
+        font-size: ${FontSizes.small};
         font-family: 'Roboto', sans-serif;
         margin: 0;
     }
     
     input, textarea, button {
-        font-size: 1em;
+        font-size: ${FontSizes.medium};
     }
 `;
