@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import NavigationButton from "./NavigationButton";
 
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
 
 const Wrapper = styled.footer`
   width: 100vw;
-  padding: 20px;
+  height: 3rem;
   color: #ffef0c;
   position: fixed;
   bottom: 0;
