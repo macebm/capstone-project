@@ -25,16 +25,4 @@ class StoreRepository extends ServiceEntityRepository
         
         return $store;
     }
-
-    public function createStore(string $name, string $postal_code, string $street){
-        $store = new Store();
-        $store->setName($name);
-        $store->setPostalCode($postal_code);
-        $store->setStreet($street);
-
-        $this->_em->persist($store);
-        $this->_em->flush();
-
-        return $store;
-    }
 }

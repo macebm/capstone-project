@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
-use Symfony\Component\Serializer\SerializerInterface;
+use App\Serializer\StoreSerializer;
 use App\Entity\Store;
 use App\Repository\StoreRepository;
 
@@ -18,12 +18,12 @@ class StoreController extends AbstractController
      */
     public function index (
         StoreRepository $repository,
-        SerializerInterface $serializer
+        StoreSerializer $serializer
     ): JsonResponse {
         $stores = $repository->findAll();
-
+        
         return new JsonResponse (
-            $serializer->serialize($stores, "json"),
+            $serializer->serialize($stores),
             JsonResponse::HTTP_OK,
             [],
             true
@@ -37,14 +37,13 @@ class StoreController extends AbstractController
     public function create(
         Request $request,
         StoreRepository $repository,
-        SerializerInterface $serializer
+        StoreSerializer $serializer
         ): JsonResponse {
-        $store = $serializer->deserialize($request->getContent(), Store::class, "json");
-
+        $store = $serializer->deserialize($request->getContent());
         $repository->save($store);
 
         return new JsonResponse(
-            $serializer->serialize($store, "json"),
+            $serializer->serialize($store),
             JsonResponse::HTTP_OK,
             [],
             true
