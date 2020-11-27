@@ -1,10 +1,13 @@
-const { default: Footer } = require("./components/Footer");
-const { default: Header } = require("./components/Header");
+import Stores from "./components/Stores";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
       <Header />
+
+      <Stores />
 
       <Footer />
     </div>

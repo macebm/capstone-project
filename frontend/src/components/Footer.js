@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
+import FontSizes from "../constants/FontSizes";
 import NavigationButton from "./NavigationButton";
 
 export default function Footer() {
   return (
     <Wrapper>
       <nav>
-        <NavigationButton onClick={sayHello}>Home</NavigationButton>
-        <NavigationButton onClick={sayHello}>App</NavigationButton>
+        <NavigationButton onClick={sayHello}>About</NavigationButton>
+        <NavigationButton onClick={sayHello}>Stores</NavigationButton>
       </nav>
     </Wrapper>
   );
@@ -17,14 +18,17 @@ export default function Footer() {
 }
 
 const Wrapper = styled.footer`
-  width: 100vw;
-  padding: 20px;
-  color: #ffef0c;
-  position: fixed;
+  background: none;
   bottom: 0;
+  font-size: ${FontSizes.verysmall};
+  min-height: 3.75rem;
+  position: fixed;
+  width: 100vw;
 
   nav {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
   }
 `;
