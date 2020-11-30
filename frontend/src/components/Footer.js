@@ -1,20 +1,17 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components/macro";
+import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
-import NavigationButton from "./NavigationButton";
 
 export default function Footer() {
   return (
     <Wrapper>
       <nav>
-        <NavigationButton onClick={sayHello}>About</NavigationButton>
-        <NavigationButton onClick={sayHello}>Stores</NavigationButton>
+        <NavLinkStyled to="/">Home</NavLinkStyled>
+        <NavLinkStyled to="/stores">Stores</NavLinkStyled>
       </nav>
     </Wrapper>
   );
-
-  function sayHello() {
-    alert("Hello");
-  }
 }
 
 const Wrapper = styled.footer`
@@ -30,5 +27,20 @@ const Wrapper = styled.footer`
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-evenly;
+  }
+`;
+
+const NavLinkStyled = styled(NavLink)`
+  background: ${Colors.primaryBackground};
+  border: none;
+  border-radius: 6px;
+  color: ${Colors.text};
+  padding: 0.5rem 0.6rem;
+  text-align: center;
+  text-decoration: none;
+  width: 5rem;
+
+  &:hover {
+    color: lightgreen;
   }
 `;
