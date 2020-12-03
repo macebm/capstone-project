@@ -13,9 +13,18 @@ export default function Stores() {
   }, []);
   return (
     <StyledSection>
-      {stores.map(({ id, name, postalCode, street }) => (
-        <Store key={id} name={name} postal_code={postalCode} street={street} />
-      ))}
+      {stores ? (
+        stores.map(({ id, name, postalCode, street }) => (
+          <Store
+            key={id}
+            name={name}
+            postal_code={postalCode}
+            street={street}
+          />
+        ))
+      ) : (
+        <h1>No Stores found</h1>
+      )}
     </StyledSection>
   );
 }
