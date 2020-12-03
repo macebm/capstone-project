@@ -3,19 +3,52 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+
+use App\Serializer\ManufacturerSerializer;
+use App\Entity\Manufacturer;
+use App\Repository\ManufacturerRepository;
 
 class ManufacturerController extends AbstractController
 {
     /**
-     * @Route("/manufacturer", methods={"GET"})
+     * @Route("/manufacturers", methods={"GET"})
      */
-    public function index(): Response
-    {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/ManufacturerController.php',
-        ]);
+    public function index (
+        ManufacturerRepository $repository,
+        ManufacturerSerializer $serializer
+    ): JsonResponse {
+        $manufacturers = $repository->findAll();
+        
+        return new JsonResponse (
+            $serializer->serialize($manufacturers),
+            JsonResponse::HTTP_OK,
+            [],
+            true
+        );
     }
+
+    /**
+     * @Route("/manufacturers", methods={"POST"})
+     */
+
+    public function create(
+        Request $request,
+        ManufacturerRepository $repository,
+        ManufacturerSerializer $serializer
+        ): JsonResponse {
+        $manufacturer = $serializer->deserialize($request->getContent());
+        $repository->save($manufacturer);
+
+        return new JsonResponse(
+            $serializer->serialize($manufacturer),
+            JsonResponse::HTTP_OK,
+            [],
+            true
+        );
+    }
+
+
 }

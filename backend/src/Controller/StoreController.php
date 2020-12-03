@@ -14,7 +14,7 @@ use App\Repository\StoreRepository;
 class StoreController extends AbstractController
 {
     /**
-     * @Route("/store", methods={"GET"})
+     * @Route("/stores", methods={"GET"})
      */
     public function index (
         StoreRepository $repository,
