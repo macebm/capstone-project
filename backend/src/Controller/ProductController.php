@@ -10,6 +10,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Serializer\ProductSerializer;
 use App\Entity\Store;
 use App\Repository\ProductRepository;
+use App\Repository\ManufacturerRepository;
+use App\Repository\StoreRepository;
+use App\Repository\CategoryRepository;
 
 class ProductController extends AbstractController
 {
@@ -31,15 +34,23 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/store", methods={"POST"})
+     * @Route("/products", methods={"POST"})
      */
 
     public function create(
         Request $request,
         ProductRepository $repository,
-        ProductSerializer $serializer
+        ProductSerializer $serializer,
+        CategoryRepository $categoryRepository,
+        ManufacturerRepository $manufacturerRepository,
+        StoreRepository $storeRepository
         ): JsonResponse {
-        $product = $serializer->deserialize($request->getContent());
+        $product = $serializer->deserialize(
+            $request->getContent(),
+            $categoryRepository,
+            $manufacturerRepository,
+            $storeRepository
+        );
         $repository->save($product);
 
         return new JsonResponse(

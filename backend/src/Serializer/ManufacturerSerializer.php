@@ -2,7 +2,7 @@
 
 namespace App\Serializer;
 
-use App\Entity\Store;
+use App\Entity\Manufacturer;
 
 class ManufacturerSerializer {
 

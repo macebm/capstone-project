@@ -12,8 +12,6 @@ class CategorySerializer {
         $this->categoriesArray[] = [
             "id" => $category->getId(),
             'name' => $category->getName(),
-            'street' => $category->getStreet(),
-            'postalCode' => $category->getPostalCode(),
         ];
         return($this);
     }
@@ -35,8 +33,6 @@ class CategorySerializer {
         $postData = \json_decode($content);
         $category = new Category();
         $category->setName($postData->name);
-        $category->setPostalCode($postData->postal_code);
-        $category->setStreet($postData->street);
 
         return $category;
 

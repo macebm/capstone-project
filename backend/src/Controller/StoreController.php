@@ -31,7 +31,7 @@ class StoreController extends AbstractController
     }
 
     /**
-     * @Route("/store", methods={"POST"})
+     * @Route("/stores", methods={"POST"})
      */
 
     public function create(

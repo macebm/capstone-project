@@ -3,19 +3,23 @@
 namespace App\Serializer;
 
 use App\Entity\Product;
+use App\Entity\Category;
+use App\Repository\CategroyRepository;
 
 class ProductSerializer {
 
     private $productsArray = [];
 
     private function setArray($product): object {
+
+        
         $this->productsArray[] = [
             "id" => $product->getId(),
             "name" => $product->getName(),
             "price" => $product->getPrice(),
-            "category" => $product->getCategory(),
-            "manufacturer" => $product->getManufacturer(),
-            "store" => $product->getStore(),
+            "category" => $product->getCategory()->getName(),
+            "manufacturer" => $product->getManufacturer()->getName(),
+            "store" => $product->getStore()->getName(),
         ];
         return($this);
     }
@@ -32,13 +36,23 @@ class ProductSerializer {
         return \json_encode($this->productsArray);
     }
 
-    public function deserialize($content){
+    public function deserialize($content, $categoryRepository, $manufacturerRepository, $storeRepository){
 
         $postData = \json_decode($content);
         $product = new Product();
         $product->setName($postData->name);
-        $product->setPostalCode($postData->postal_code);
-        $product->setStreet($postData->street);
+        $product->setPrice($postData->price);
+
+
+        $category = $categoryRepository->find($postData->category);
+        $product->setCategory($category);
+
+        $manufacturer = $manufacturerRepository->find($postData->manufacturer);
+        $product->setManufacturer($manufacturer);
+
+        $store = $storeRepository->find($postData->store);
+        $product->setStore($store);
+        
 
         return $product;
 
