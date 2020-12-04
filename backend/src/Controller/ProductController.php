@@ -34,6 +34,60 @@ class ProductController extends AbstractController
     }
 
     /**
+     * @Route("/products/category/{id}", methods={"GET"})
+     */
+    public function getProductsByCategory (
+        $id,
+        ProductRepository $repository,
+        ProductSerializer $serializer
+    ): JsonResponse {
+        $products = $repository->findBy(['category' => $id]);
+        
+        return new JsonResponse (
+            $serializer->serialize($products),
+            JsonResponse::HTTP_OK,
+            [],
+            true
+        );
+    }
+
+    /**
+     * @Route("/products/manufacturer/{id}", methods={"GET"})
+     */
+    public function getProductsByManufacturer (
+        $id,
+        ProductRepository $repository,
+        ProductSerializer $serializer
+    ): JsonResponse {
+        $products = $repository->findBy(['manufacturer' => $id]);
+        
+        return new JsonResponse (
+            $serializer->serialize($products),
+            JsonResponse::HTTP_OK,
+            [],
+            true
+        );
+    }
+
+    /**
+     * @Route("/products/store/{id}", methods={"GET"})
+     */
+    public function getProductsByStore (
+        $id,
+        ProductRepository $repository,
+        ProductSerializer $serializer
+    ): JsonResponse {
+        $products = $repository->findBy(['store' => $id]);
+        
+        return new JsonResponse (
+            $serializer->serialize($products),
+            JsonResponse::HTTP_OK,
+            [],
+            true
+        );
+    }
+
+    /**
      * @Route("/products", methods={"POST"})
      */
 
