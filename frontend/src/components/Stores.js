@@ -17,6 +17,7 @@ export default function Stores() {
         stores.map(({ id, name, postalCode, street }) => (
           <Store
             key={id}
+            storeId={id}
             name={name}
             postal_code={postalCode}
             street={street}
