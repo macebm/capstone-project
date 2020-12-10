@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
 import Colors from "../constants/Colors";
+import FontSizes from "../constants/FontSizes";
 import getProductsByStore from "../services/getProductsByStore";
 import getStoreById from "../services/getStoreById";
 import Product from "./Product";
@@ -92,10 +93,16 @@ const StyledSection = styled.section`
   gap: 2rem;
   margin-bottom: 3.75rem;
   padding: 2rem;
+
+  h1 {
+    font-size: ${FontSizes.toolarge};
+  }
 `;
 
 const StyledProductBox = styled.div`
+  border: 1px solid black;
   display: flex;
-  gap: 10px;
+  padding: 10px;
+  gap: 15px;
   overflow-x: auto;
 `;
