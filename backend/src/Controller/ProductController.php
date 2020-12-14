@@ -8,11 +8,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 use App\Serializer\ProductSerializer;
-use App\Entity\Store;
 use App\Repository\ProductRepository;
-use App\Repository\ManufacturerRepository;
-use App\Repository\StoreRepository;
-use App\Repository\CategoryRepository;
+use App\Entity\Store;
 
 class ProductController extends AbstractController
 {
@@ -94,16 +91,10 @@ class ProductController extends AbstractController
     public function create(
         Request $request,
         ProductRepository $repository,
-        ProductSerializer $serializer,
-        CategoryRepository $categoryRepository,
-        ManufacturerRepository $manufacturerRepository,
-        StoreRepository $storeRepository
+        ProductSerializer $serializer
         ): JsonResponse {
         $product = $serializer->deserialize(
-            $request->getContent(),
-            $categoryRepository,
-            $manufacturerRepository,
-            $storeRepository
+            $request->getContent()
         );
         $repository->save($product);
 
