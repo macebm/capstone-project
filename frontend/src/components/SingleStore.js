@@ -1,6 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
-import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 import getProductsByStore from "../services/getProductsByStore";
 import getStoreById from "../services/getStoreById";
