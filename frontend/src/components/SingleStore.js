@@ -89,10 +89,10 @@ export default function SingleStore() {
 
 const StyledSection = styled.section`
   display: grid;
-  text-align: center;
   gap: 2rem;
   margin-bottom: 3.75rem;
   padding: 2rem;
+  text-align: center;
 
   h1 {
     font-size: ${FontSizes.toolarge};
@@ -102,7 +102,7 @@ const StyledSection = styled.section`
 const StyledProductBox = styled.div`
   border: 1px solid black;
   display: flex;
-  padding: 10px;
   gap: 15px;
   overflow-x: auto;
+  padding: 10px;
 `;
