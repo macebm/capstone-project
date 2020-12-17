@@ -1,0 +1,106 @@
+name,price,category_id,manufacturer_id,store_id
+Soja mit Calcium,1.16,1,1,1
+Hafer Soja Barista,1.45,1,1,1
+Hafer Natur,0.97,1,1,1
+Reis Natur,1.45,1,1,1
+Mandel Natur,1.74,1,1,1
+Koko Coconut Original,2.69,1,10,1
+Soja Bio,1.94,1,6,1
+Soja,1.94,1,6,1
+Soja Light,1.94,1,6,1
+Soja ohne Zucker,1.94,1,6,1
+Barista Hafer,2.19,1,6,1
+Soja Vanille,1.94,1,6,1
+Hafer Mandel,1.93,1,6,1
+Hafer ohne Zucker,1.93,1,6,1
+Mandel ungeroestet ohne Zucker,2.70,1,6,1
+Mandel ohne Zucker,2.70,1,6,1
+Bio Klassik,2.29,1,11,1
+Hafer Calcium,1.99,1,7,1
+Bio Hafer,1.99,1,7,1
+Hafer Kakao,2.19,1,7,1
+Bio Hafer Vanille,2.19,1,7,1
+Hafer Barista,2.13,1,7,1
+Erbsenprotein Barista,2.49,1,12,1
+Erbsenprotein ungesuest,2.49,1,12,1
+Hafer,2.29,1,13,1
+Bio Barista Hafer,1.99,1,14,1
+Bio Hafer glutenfrei,1.99,1,14,1
+Bio Hafer,1.59,1,14,1
+Bio Soja Natur,1.09,1,14,1
+Reibegenuss,2.93,2,8,1
+Burgerscheiben,2.93,2,8,1
+Geniesserscheiben Kr�uter,2.93,2,8,1
+Geniesserscheiben Paprika Chilli,2.93,2,8,1
+Geniesserscheiben,2.93,2,8,1
+Veganes Muehlen Hack,2.93,3,9,1
+Veganes Muehlensteak Typ Rind,3.49,3,9,1
+Vegane Nuggets klassisch,2.93,3,9,1
+Vegane Muehlen Schnitzel,2.93,3,9,1
+Vegane Muehlen Cordon Bleu,2.93,3,9,1
+Veganes Muehlen Filtet Typ Haehnchen,2.99,3,9,1
+Fanburger,3.79,3,15,1
+Veggie Gyros,3.49,3,15,1
+Peace Burger,2.49,3,16,1
+Frei Burger,3.99,3,17,1
+Veganes Muehlen Hack,3.62,3,9,2
+Vegane Muehlen Cordon Bleu,3.92,3,9,2
+Knusptiges Schnitzel Heahnchen Art,3.93,3,18,2
+Hafer Calcium,1.99,1,7,2
+Bio Hafer,1.99,1,7,2
+Hafer Barista,2.19,1,7,2
+Hafer Kakao,2.19,1,7,2
+Soja Protein,2.72,1,6,2
+Cashew,2.72,1,6,2
+Soja Schokolade,1.94,1,6,2
+Haselnuss,2.72,1,6,2
+Kokosnuss ohne Zucker,2.61,1,6,2
+Soja Vanille,1.94,1,6,2
+Kokosnuss,2.61,1,6,2
+Soja Light,1.94,1,6,2
+Soja ohne Zucker,1.94,1,6,2
+Soja,1.94,1,6,2
+Mandel ungesuesst,2.88,1,19,2
+Soja ungesuesst,1.16,1,19,2
+Mandel Reis,1.94,1,20,2
+Mandel ohne Zucker,2.99,1,13,2
+Soja,0.96,1,2,2
+Green Cuisine Burger,2.93,3,21,2
+Bratwurst Chorizo Art,2.65,3,4,3
+Bio Bratw�rstchen,2.85,3,4,3
+Snackwurst,0.95,3,4,3
+Hacksteak,2.95,3,4,3
+Cashew ohne Zucker,1.95,1,13,3
+Mandel Vanille,2.95,1,13,3
+Hafer ohne Zucker,2.25,1,13,3
+Mandel ohne Zucker,2.95,1,13,3
+Hafer Barista,2.45,1,13,3
+Reis Kokos,2.95,1,13,3
+Hafer mit Calcium,1.95,1,13,3
+Hafer ohne Zucker,1.95,1,13,3
+Bio Hafer,1.95,1,7,3
+Bio Hafer Calcium,1.95,1,7,3
+Hafer Barista,2.15,1,7,3
+Soja,0.95,1,4,3
+Mandel,2.45,1,4,3
+Soja Calcium,0.95,1,4,3
+Hafer Soja Barista,1.45,1,4,3
+Reis Calcium,1.45,1,4,3
+Reis,1.45,1,4,3
+Hafer Vanille,1.25,1,4,3
+Dinkel,1.45,1,4,3
+Hafer,0.95,1,4,3
+Kokos,2.45,1,4,3
+Bio Mandel,2.85,1,22,3
+Bio Hafer,1.75,1,22,3
+Vegane Muehlen Cordon Bleu,2.73,3,9,4
+Vegane Muehlen Schnitzel,2.73,3,9,4
+Soja,1.74,1,6,4
+Soja Light,1.74,1,6,4
+Hafer,1.93,1,6,4
+Mandel ohne Zucker,2.70,1,6,4
+Mandel,2.70,1,6,4
+Kokosnuss ohne Zucker,2.70,1,6,4
+Soja,0.92,1,23,4
+Soja Vanille,0.92,1,23,4
+Hafer Schoko,0.96,1,23,4

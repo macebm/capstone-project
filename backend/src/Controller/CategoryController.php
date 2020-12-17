@@ -7,23 +7,23 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
-use App\Serializer\StoreSerializer;
-use App\Entity\Store;
-use App\Repository\StoreRepository;
+use App\Serializer\CategorySerializer;
+use App\Entity\Category;
+use App\Repository\CategoryRepository;
 
-class StoreController extends AbstractController
+class CategoryController extends AbstractController
 {
     /**
-     * @Route("/stores", methods={"GET"})
+     * @Route("/categories", methods={"GET"})
      */
     public function index (
-        StoreRepository $repository,
-        StoreSerializer $serializer
+        CategoryRepository $repository,
+        CategorySerializer $serializer
     ): JsonResponse {
-        $stores = $repository->findAll();
+        $categories = $repository->findAll();
         
         return new JsonResponse (
-            $serializer->serialize($stores),
+            $serializer->serialize($categories),
             JsonResponse::HTTP_OK,
             [],
             true
@@ -31,19 +31,19 @@ class StoreController extends AbstractController
     }
 
     /**
-     * @Route("/stores", methods={"POST"})
+     * @Route("/categories", methods={"POST"})
      */
 
     public function create(
         Request $request,
-        StoreRepository $repository,
-        StoreSerializer $serializer
+        CategoryRepository $repository,
+        CategorySerializer $serializer
         ): JsonResponse {
-        $store = $serializer->deserialize($request->getContent());
-        $repository->save($store);
+        $category = $serializer->deserialize($request->getContent());
+        $repository->save($category);
 
         return new JsonResponse(
-            $serializer->serialize($store),
+            $serializer->serialize($category),
             JsonResponse::HTTP_OK,
             [],
             true

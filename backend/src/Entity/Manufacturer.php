@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\StoreRepository;
+use App\Repository\ManufacturerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=StoreRepository::class)
+ * @ORM\Entity(repositoryClass=ManufacturerRepository::class)
  */
-class Store
+class Manufacturer
 {
     /**
      * @ORM\Id
@@ -25,17 +25,7 @@ class Store
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=9)
-     */
-    private $postal_code;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $street;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Product::class, mappedBy="store")
+     * @ORM\OneToMany(targetEntity=Product::class, mappedBy="manufacturer")
      */
     private $products;
 
@@ -61,30 +51,6 @@ class Store
         return $this;
     }
 
-    public function getPostalCode(): ?string
-    {
-        return $this->postal_code;
-    }
-
-    public function setPostalCode(string $postal_code): self
-    {
-        $this->postal_code = $postal_code;
-
-        return $this;
-    }
-
-    public function getStreet(): ?string
-    {
-        return $this->street;
-    }
-
-    public function setStreet(string $street): self
-    {
-        $this->street = $street;
-
-        return $this;
-    }
-
     /**
      * @return Collection|Product[]
      */
@@ -97,7 +63,7 @@ class Store
     {
         if (!$this->products->contains($product)) {
             $this->products[] = $product;
-            $product->setStore($this);
+            $product->setManufacturer($this);
         }
 
         return $this;
@@ -107,8 +73,8 @@ class Store
     {
         if ($this->products->removeElement($product)) {
             // set the owning side to null (unless already changed)
-            if ($product->getStore() === $this) {
-                $product->setStore(null);
+            if ($product->getManufacturer() === $this) {
+                $product->setManufacturer(null);
             }
         }
 
