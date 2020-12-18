@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
+import Categories from "../constants/Categories";
 import FontSizes from "../constants/FontSizes";
 import getProductsByStore from "../services/getProductsByStore";
 import getStoreById from "../services/getStoreById";
@@ -20,19 +21,18 @@ export default function SingleStore() {
   useEffect(() => {
     getStoreById(storeId)
       .then((data) => setStoreName(data))
-      .catch((error) => console.log(error.message));
-  }, []);
-
-  useEffect(() => {
+      .catch((error) => console.error(error.message));
     getProductsByStore(storeId)
       .then((data) => setProducts(data))
-      .catch((error) => console.log(error.message));
+      .catch((error) => console.error(error.message));
   }, []);
 
   useEffect(() => {
-    setMilk(products.filter((el) => el.category === "Milch"));
-    setCheese(products.filter((el) => el.category === "Käse"));
-    setMeat(products.filter((el) => el.category === "Fleisch"));
+    setMilk(products.filter((el) => el.category === Categories.categoryMilk));
+    setCheese(
+      products.filter((el) => el.category === Categories.categoryCheese)
+    );
+    setMeat(products.filter((el) => el.category === Categories.categoryMeat));
   }, [products]);
 
   return (
@@ -100,7 +100,6 @@ const StyledSection = styled.section`
 `;
 
 const StyledProductBox = styled.div`
-  border: 1px solid black;
   display: flex;
   gap: 15px;
   overflow-x: auto;

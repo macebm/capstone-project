@@ -4,8 +4,6 @@ import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 
 export default function Store({ storeId, name, postal_code, street }) {
-  //const storeLink = "/" + name;
-
   return (
     <Wrapper to={"/stores/" + storeId}>
       <h3>{name}</h3>

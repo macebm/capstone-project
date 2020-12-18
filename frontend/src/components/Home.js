@@ -7,10 +7,21 @@ export default function Home() {
       <HomeCard>
         <h2>Welcome</h2>
         <p>Have you always wondered what vegans can actually eat and drink?</p>
-        <p>Be happy. Finally you get the answer</p>
+        <p>Find out:</p>
       </HomeCard>
 
-      <HomeCard>No Video at the mom</HomeCard>
+      <HomeCard>
+        <h2>Nerdy stuff</h2>
+        <iframe
+          title="Niko Rittenau"
+          width="290"
+          height="200"
+          src="https://www.youtube-nocookie.com/embed/RVW62NidDv8"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </HomeCard>
     </StyledSection>
   );
 }
