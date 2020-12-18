@@ -36,6 +36,8 @@ class ProductSerializer {
             "category" => $product->getCategory()->getName(),
             "manufacturer" => $product->getManufacturer()->getName(),
             "store" => $product->getStore()->getName(),
+            "postalCode" => $product->getStore()->getPostalCode(),
+            "street" => $product->getStore()->getStreet(),
         ];
         return($this);
     }

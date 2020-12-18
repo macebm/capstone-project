@@ -34,6 +34,7 @@ const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: space-evenly;
   margin-bottom: 3.75rem;
   padding: 2rem;
 `;

@@ -1,6 +1,6 @@
-export default function getStoreById(storeId) {
+export default function getCategories() {
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
-  return fetch(`${apiBaseUrl}/stores/` + storeId)
+  return fetch(`${apiBaseUrl}/categories`)
     .then((res) => res.json())
     .catch((err) => console.log(err));
 }

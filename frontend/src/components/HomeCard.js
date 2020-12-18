@@ -7,11 +7,13 @@ export default function HomeCard({ children }) {
 }
 
 const Wrapper = styled.div`
+  align-items: center;
   background: ${Colors.cardColor};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 10px;
   font-size: ${FontSizes.medium};
   margin: 0 auto;
   padding: 5px;

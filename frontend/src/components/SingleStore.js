@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
 import Categories from "../constants/Categories";
+import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 import getProductsByStore from "../services/getProductsByStore";
 import getStoreById from "../services/getStoreById";
@@ -88,6 +89,7 @@ export default function SingleStore() {
 }
 
 const StyledSection = styled.section`
+  color: ${Colors.headers};
   display: grid;
   gap: 2rem;
   margin-bottom: 3.75rem;

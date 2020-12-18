@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components/macro";
-import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 
 export default createGlobalStyle`
@@ -8,7 +7,8 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
     body{
-        background: ${Colors.secondaryBackground};
+
+        background: url("https://cdn.pixabay.com/photo/2019/05/06/19/13/green-4183977_1280.jpg");
         font-size: ${FontSizes.small};
         font-family: 'Roboto', sans-serif;
         margin: 0;

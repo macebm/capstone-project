@@ -9,6 +9,7 @@ export default function Footer() {
       <nav>
         <NavLinkStyled to="/">Home</NavLinkStyled>
         <NavLinkStyled to="/stores">Stores</NavLinkStyled>
+        <NavLinkStyled to="/search">Search</NavLinkStyled>
       </nav>
     </Wrapper>
   );
