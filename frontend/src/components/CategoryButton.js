@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Colors from "../constants/Colors";
 
 export default function CategoryButton({ id, children, onClick }) {
