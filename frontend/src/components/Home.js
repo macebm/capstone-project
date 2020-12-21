@@ -3,7 +3,7 @@ import HomeCard from "./HomeCard";
 
 export default function Home() {
   return (
-    <StyledSection>
+    <Section>
       <HomeCard>
         <p>Have you always wondered what vegans can actually eat and drink?</p>
         <p>Find out:</p>
@@ -21,11 +21,11 @@ export default function Home() {
           allowfullscreen
         ></iframe>
       </HomeCard>
-    </StyledSection>
+    </Section>
   );
 }
 
-const StyledSection = styled.section`
+const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;

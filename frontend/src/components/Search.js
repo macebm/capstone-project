@@ -16,6 +16,7 @@ export default function Search() {
       .then((data) => setCategories(data))
       .catch((error) => console.error(error.message));
   }, []);
+
   function handleCategory(categoryId) {
     getProductsByCategory(categoryId)
       .then((data) => setProducts(data))
@@ -23,8 +24,8 @@ export default function Search() {
   }
 
   return (
-    <Wrapper>
-      <StyledSection>
+    <SearchPage>
+      <Section>
         {categories ? (
           categories.map(({ id, name }) => (
             <CategoryButton key={id} id={id} onClick={handleCategory}>
@@ -34,9 +35,9 @@ export default function Search() {
         ) : (
           <h3>No Internet</h3>
         )}
-      </StyledSection>
+      </Section>
 
-      <StyledSection>
+      <Section>
         {products ? (
           products.map(
             ({ id, manufacturer, name, price, store, postalCode, street }) => (
@@ -54,17 +55,17 @@ export default function Search() {
         ) : (
           <h3>No Products</h3>
         )}
-      </StyledSection>
-    </Wrapper>
+      </Section>
+    </SearchPage>
   );
 }
 
-const Wrapper = styled.div`
+const SearchPage = styled.div`
   color: ${Colors.headers};
   text-align: center;
 `;
 
-const StyledSection = styled.section`
+const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;

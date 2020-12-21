@@ -5,15 +5,15 @@ import FontSizes from "../constants/FontSizes";
 
 export default function Store({ storeId, name, postal_code, street }) {
   return (
-    <Wrapper to={"/stores/" + storeId}>
+    <StoreCard to={"/stores/" + storeId}>
       <h3>{name}</h3>
       <p>{postal_code}</p>
       <p>{street}</p>
-    </Wrapper>
+    </StoreCard>
   );
 }
 
-const Wrapper = styled(NavLink)`
+const StoreCard = styled(NavLink)`
   background: ${Colors.cardColor};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   color: black;

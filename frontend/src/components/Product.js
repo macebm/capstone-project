@@ -4,15 +4,15 @@ import FontSizes from "../constants/FontSizes";
 
 export default function Product({ manufacturer, name, price }) {
   return (
-    <Wrapper>
+    <ProductCard>
       <h3>{name}</h3>
       <p>{manufacturer}</p>
       <p>{price} €</p>
-    </Wrapper>
+    </ProductCard>
   );
 }
 
-const Wrapper = styled.div`
+const ProductCard = styled.div`
   background: ${Colors.cardColor};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   color: black;

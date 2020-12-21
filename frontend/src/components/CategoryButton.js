@@ -2,10 +2,10 @@ import styled from "styled-components/macro";
 import Colors from "../constants/Colors";
 
 export default function CategoryButton({ id, children, onClick }) {
-  return <Wrapper onClick={() => onClick(id)}>{children}</Wrapper>;
+  return <Button onClick={() => onClick(id)}>{children}</Button>;
 }
 
-const Wrapper = styled.button`
+const Button = styled.button`
   background: ${Colors.primaryBackground};
   border: none;
   border-radius: 6px;

@@ -11,18 +11,18 @@ export default function ProductWithStore({
   street,
 }) {
   return (
-    <Wrapper>
+    <ProductCard>
       <h3>{name}</h3>
       <p>Manufacturer: {manufacturer}</p>
       <p>Price: {price} €</p>
       <p>Store: {store}</p>
       <p>Postal code: {postalCode}</p>
       <p>Street: {street}</p>
-    </Wrapper>
+    </ProductCard>
   );
 }
 
-const Wrapper = styled.div`
+const ProductCard = styled.div`
   background: ${Colors.cardColor};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   color: black;

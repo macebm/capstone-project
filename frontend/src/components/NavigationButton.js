@@ -2,10 +2,10 @@ import styled from "styled-components/macro";
 import Colors from "../constants/Colors";
 
 export default function NavigationButton({ children, onClick }) {
-  return <Wrapper onClick={onClick}>{children}</Wrapper>;
+  return <Button onClick={onClick}>{children}</Button>;
 }
 
-const Wrapper = styled.button`
+const Button = styled.button`
   background: ${Colors.primaryBackground};
   border: none;
   border-radius: 6px;

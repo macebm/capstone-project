@@ -3,10 +3,10 @@ import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 
 export default function HomeCard({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+  return <Div>{children}</Div>;
 }
 
-const Wrapper = styled.div`
+const Div = styled.div`
   align-items: center;
   background: ${Colors.cardColor};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
