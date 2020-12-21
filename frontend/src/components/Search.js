@@ -24,7 +24,6 @@ export default function Search() {
 
   return (
     <Wrapper>
-      <h2>Categories</h2>
       <StyledSection>
         {categories ? (
           categories.map(({ id, name }) => (
@@ -36,8 +35,6 @@ export default function Search() {
           <h3>No Internet</h3>
         )}
       </StyledSection>
-
-      <h2>Products</h2>
 
       <StyledSection>
         {products ? (

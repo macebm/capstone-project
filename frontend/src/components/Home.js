@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <StyledSection>
       <HomeCard>
-        <h2>Welcome</h2>
         <p>Have you always wondered what vegans can actually eat and drink?</p>
         <p>Find out:</p>
       </HomeCard>

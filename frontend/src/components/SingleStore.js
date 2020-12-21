@@ -45,14 +45,18 @@ export default function SingleStore() {
       <h2>Milk</h2>
 
       <StyledProductBox>
-        {milk.map(({ id, name, price, manufacturer }) => (
-          <Product
-            key={id}
-            name={name}
-            price={price}
-            manufacturer={manufacturer}
-          />
-        ))}
+        {milk ? (
+          milk.map(({ id, name, price, manufacturer }) => (
+            <Product
+              key={id}
+              name={name}
+              price={price}
+              manufacturer={manufacturer}
+            />
+          ))
+        ) : (
+          <h2>No Milk</h2>
+        )}
       </StyledProductBox>
 
       <h2>Cheese</h2>
@@ -75,14 +79,18 @@ export default function SingleStore() {
       <h2>Meat</h2>
 
       <StyledProductBox>
-        {meat.map(({ id, name, price, manufacturer }) => (
-          <Product
-            key={id}
-            name={name}
-            price={price}
-            manufacturer={manufacturer}
-          />
-        ))}
+        {meat ? (
+          meat.map(({ id, name, price, manufacturer }) => (
+            <Product
+              key={id}
+              name={name}
+              price={price}
+              manufacturer={manufacturer}
+            />
+          ))
+        ) : (
+          <h2>No Meat</h2>
+        )}
       </StyledProductBox>
     </StyledSection>
   );
