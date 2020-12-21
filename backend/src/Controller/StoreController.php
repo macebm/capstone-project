@@ -31,6 +31,24 @@ class StoreController extends AbstractController
     }
 
     /**
+     * @Route("/stores/{id}", methods={"GET"})
+     */
+    public function getProductsByCategory (
+        $id,
+        StoreRepository $repository,
+        StoreSerializer $serializer
+    ): JsonResponse {
+        $store = $repository->findBy(['id' => $id]);
+        
+        return new JsonResponse (
+            $serializer->serialize($store),
+            JsonResponse::HTTP_OK,
+            [],
+            true
+        );
+    }
+
+    /**
      * @Route("/stores", methods={"POST"})
      */
 

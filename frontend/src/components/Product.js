@@ -1,28 +1,25 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components/macro";
 import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 
-export default function Store({ storeId, name, postal_code, street }) {
+export default function Product({ manufacturer, name, price }) {
   return (
-    <Wrapper to={"/stores/" + storeId}>
+    <Wrapper>
       <h3>{name}</h3>
-      <p>{postal_code}</p>
-      <p>{street}</p>
+      <p>{manufacturer}</p>
+      <p>{price} €</p>
     </Wrapper>
   );
 }
 
-const Wrapper = styled(NavLink)`
+const Wrapper = styled.div`
   background: ${Colors.cardColor};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   color: black;
   font-size: ${FontSizes.medium};
-  margin: 0 auto;
   padding: 5px;
   text-align: center;
-  text-decoration: none;
-  width: 300px;
+  min-width: 200px;
 
   h3 {
     font-size: ${FontSizes.large};
