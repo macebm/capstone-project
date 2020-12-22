@@ -1,0 +1,2 @@
+RewriteBase /
+DirectoryIndex index.php
