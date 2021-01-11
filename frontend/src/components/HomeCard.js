@@ -13,7 +13,7 @@ const Div = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   gap: 10px;
-  font-size: ${FontSizes.large};
+  font-size: ${FontSizes.small};
   margin: 0 auto;
   padding: 5px;
   text-align: center;

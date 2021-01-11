@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <Section>
       <HomeCard>
-        <p>Have you always wondered what vegans can actually eat and drink? Here you will find it.</p>
+        <h2>
+          Have you always wondered what vegans can actually eat and drink? Here
+          you will find it.
+        </h2>
       </HomeCard>
 
       <HomeCard>
@@ -27,7 +30,7 @@ export default function Home() {
 const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
-  gap: .2rem;
+  gap: 0.2rem;
   margin-bottom: 3.75rem;
   padding: 2rem;
 `;
