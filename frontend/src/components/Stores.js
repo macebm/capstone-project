@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
 import getStores from "../services/getStores";
+import NotFound from "./NotFound";
 import Store from "./Store";
 
 export default function Stores() {
@@ -24,7 +25,7 @@ export default function Stores() {
           />
         ))
       ) : (
-        <h1>No Stores found</h1>
+        <NotFound/>
       )}
     </Section>
   );

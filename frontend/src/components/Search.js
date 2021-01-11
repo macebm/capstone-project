@@ -5,6 +5,7 @@ import FontSizes from "../constants/FontSizes";
 import getCategories from "../services/getCategories";
 import getProductsByCategory from "../services/getProductsByCategory";
 import CategoryButton from "./CategoryButton";
+import NotFound from "./NotFound";
 import ProductWithStore from "./ProductWithStore";
 
 export default function Search() {
@@ -33,7 +34,7 @@ export default function Search() {
             </CategoryButton>
           ))
         ) : (
-          <h3>No Internet</h3>
+          <NotFound />
         )}
       </Section>
 
