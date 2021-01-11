@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
 import Categories from "../constants/Categories";
+import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 import getProductsByStore from "../services/getProductsByStore";
 import getStoreById from "../services/getStoreById";
@@ -36,27 +37,31 @@ export default function SingleStore() {
   }, [products]);
 
   return (
-    <StyledSection>
+    <Section>
       {storeName.map(({ id, name }) => (
         <h1 key={id}> {name}</h1>
       ))}
 
       <h2>Milk</h2>
 
-      <StyledProductBox>
-        {milk.map(({ id, name, price, manufacturer }) => (
-          <Product
-            key={id}
-            name={name}
-            price={price}
-            manufacturer={manufacturer}
-          />
-        ))}
-      </StyledProductBox>
+      <ProductBox>
+        {milk ? (
+          milk.map(({ id, name, price, manufacturer }) => (
+            <Product
+              key={id}
+              name={name}
+              price={price}
+              manufacturer={manufacturer}
+            />
+          ))
+        ) : (
+          <h2>No Milk</h2>
+        )}
+      </ProductBox>
 
       <h2>Cheese</h2>
 
-      <StyledProductBox>
+      <ProductBox>
         {cheese.length > 0 ? (
           cheese.map(({ id, name, price, manufacturer }) => (
             <Product
@@ -69,25 +74,30 @@ export default function SingleStore() {
         ) : (
           <h2>No Cheese</h2>
         )}
-      </StyledProductBox>
+      </ProductBox>
 
       <h2>Meat</h2>
 
-      <StyledProductBox>
-        {meat.map(({ id, name, price, manufacturer }) => (
-          <Product
-            key={id}
-            name={name}
-            price={price}
-            manufacturer={manufacturer}
-          />
-        ))}
-      </StyledProductBox>
-    </StyledSection>
+      <ProductBox>
+        {meat ? (
+          meat.map(({ id, name, price, manufacturer }) => (
+            <Product
+              key={id}
+              name={name}
+              price={price}
+              manufacturer={manufacturer}
+            />
+          ))
+        ) : (
+          <h2>No Meat</h2>
+        )}
+      </ProductBox>
+    </Section>
   );
 }
 
-const StyledSection = styled.section`
+const Section = styled.section`
+  color: ${Colors.headers};
   display: grid;
   gap: 2rem;
   margin-bottom: 3.75rem;
@@ -99,7 +109,7 @@ const StyledSection = styled.section`
   }
 `;
 
-const StyledProductBox = styled.div`
+const ProductBox = styled.div`
   display: flex;
   gap: 15px;
   overflow-x: auto;

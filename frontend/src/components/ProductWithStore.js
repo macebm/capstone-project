@@ -2,12 +2,22 @@ import styled from "styled-components/macro";
 import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
 
-export default function Product({ manufacturer, name, price }) {
+export default function ProductWithStore({
+  manufacturer,
+  name,
+  price,
+  store,
+  postalCode,
+  street,
+}) {
   return (
     <ProductCard>
       <h3>{name}</h3>
-      <p>{manufacturer}</p>
-      <p>{price} €</p>
+      <p>Manufacturer: {manufacturer}</p>
+      <p>Price: {price} €</p>
+      <p>Store: {store}</p>
+      <p>Postal code: {postalCode}</p>
+      <p>Street: {street}</p>
     </ProductCard>
   );
 }
@@ -19,7 +29,7 @@ const ProductCard = styled.div`
   font-size: ${FontSizes.medium};
   padding: 5px;
   text-align: center;
-  min-width: 200px;
+  width: 355px;
 
   h3 {
     font-size: ${FontSizes.large};

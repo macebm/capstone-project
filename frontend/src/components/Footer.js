@@ -5,16 +5,17 @@ import FontSizes from "../constants/FontSizes";
 
 export default function Footer() {
   return (
-    <Wrapper>
+    <AppFooter>
       <nav>
         <NavLinkStyled to="/">Home</NavLinkStyled>
         <NavLinkStyled to="/stores">Stores</NavLinkStyled>
+        <NavLinkStyled to="/search">Search</NavLinkStyled>
       </nav>
-    </Wrapper>
+    </AppFooter>
   );
 }
 
-const Wrapper = styled.footer`
+const AppFooter = styled.footer`
   background: none;
   bottom: 0;
   font-size: ${FontSizes.verysmall};

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components/macro";
-import Colors from "../constants/Colors";
 import FontSizes from "../constants/FontSizes";
+import ImgSrc from "../img/Background.jpg";
 
 export default createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -8,7 +8,8 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
     body{
-        background: ${Colors.secondaryBackground};
+
+        background: url(${ImgSrc});
         font-size: ${FontSizes.small};
         font-family: 'Roboto', sans-serif;
         margin: 0;

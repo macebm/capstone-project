@@ -3,9 +3,8 @@ import HomeCard from "./HomeCard";
 
 export default function Home() {
   return (
-    <StyledSection>
+    <Section>
       <HomeCard>
-        <h2>Welcome</h2>
         <p>Have you always wondered what vegans can actually eat and drink?</p>
         <p>Find out:</p>
       </HomeCard>
@@ -14,19 +13,19 @@ export default function Home() {
         <h2>Nerdy stuff</h2>
         <iframe
           title="Niko Rittenau"
-          width="290"
-          height="200"
+          width="290px"
+          height="200px"
           src="https://www.youtube-nocookie.com/embed/RVW62NidDv8"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
       </HomeCard>
-    </StyledSection>
+    </Section>
   );
 }
 
-const StyledSection = styled.section`
+const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;

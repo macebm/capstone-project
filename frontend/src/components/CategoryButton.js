@@ -1,8 +1,8 @@
 import styled from "styled-components/macro";
 import Colors from "../constants/Colors";
 
-export default function NavigationButton({ children, onClick }) {
-  return <Button onClick={onClick}>{children}</Button>;
+export default function CategoryButton({ id, children, onClick }) {
+  return <Button onClick={() => onClick(id)}>{children}</Button>;
 }
 
 const Button = styled.button`
@@ -10,11 +10,11 @@ const Button = styled.button`
   border: none;
   border-radius: 6px;
   color: ${Colors.text};
-  padding: 0.5rem 0.6rem;
-  text-align: center;
-  width: 5rem;
+  padding: 0.2rem 0.3rem;
+  width: 355px;
 
   &:hover {
-    color: lightgreen;
+    background: ${Colors.text};
+    color: black;
   }
 `;

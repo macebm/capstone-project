@@ -4,14 +4,14 @@ import FontSizes from "../constants/FontSizes";
 
 export default function Header() {
   return (
-    <Wrapper>
+    <AppHeader>
       plant
       <h3>Base</h3>
-    </Wrapper>
+    </AppHeader>
   );
 }
 
-const Wrapper = styled.header`
+const AppHeader = styled.header`
   background: ${Colors.primaryBackground};
   color: lightgreen;
   display: flex;

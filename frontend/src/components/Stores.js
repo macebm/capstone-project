@@ -12,7 +12,7 @@ export default function Stores() {
       .catch((err) => console.log(err.message));
   }, []);
   return (
-    <StyledSection>
+    <Section>
       {stores ? (
         stores.map(({ id, name, postalCode, street }) => (
           <Store
@@ -26,14 +26,15 @@ export default function Stores() {
       ) : (
         <h1>No Stores found</h1>
       )}
-    </StyledSection>
+    </Section>
   );
 }
 
-const StyledSection = styled.section`
+const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: space-evenly;
   margin-bottom: 3.75rem;
   padding: 2rem;
 `;

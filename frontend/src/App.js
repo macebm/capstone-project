@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Search from "./components/Search";
 import SingleStore from "./components/SingleStore";
 import Stores from "./components/Stores";
 
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/stores/:storeId">
           <SingleStore />
+        </Route>
+        <Route path="/search">
+          <Search />
         </Route>
       </Switch>
 

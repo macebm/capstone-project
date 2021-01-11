@@ -3,6 +3,7 @@ const Colors = {
   secondaryBackground: "rgba(213, 209,160, 0.2)",
   cardColor: "white",
   text: "#ffef0c",
+  headers: "white",
 };
 
 export default Colors;
