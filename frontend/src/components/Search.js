@@ -62,7 +62,7 @@ export default function Search() {
 }
 
 const SearchPage = styled.div`
-  color: ${Colors.headers};
+  color: ${Colors.secondText};
   text-align: center;
 `;
 
