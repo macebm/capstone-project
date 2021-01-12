@@ -6,8 +6,7 @@ export default function Home() {
     <Section>
       <HomeCard>
         <h2>
-          Have you always wondered what vegans can actually eat and drink? Here
-          you will find it.
+          Have you always wondered what vegans can actually eat and drink? Here you can find out.
         </h2>
       </HomeCard>
 
